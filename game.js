@@ -54,7 +54,7 @@ function home(){
   if(state)saveBest();state=null;paused=false;finished=false;keys.clear();input={};pointers.clear();activePointer=null;
   document.body.classList.remove('playing');$('overlay').hidden=true;$('pause').hidden=true;$('boss-hud').hidden=true;$('stage-chip').hidden=false;
   $('launch').firstElementChild.textContent='출격하기';audio.boss=false;audio.pause();$('score').textContent='0000000';$('best').textContent=String(best).padStart(7,'0');
-  $('lives').textContent='▲ ▲ ▲';$('bombs').textContent='B × 02';$('weapon').textContent='VULCAN / LV. 01';$('progress').style.width='0%';
+  $('lives').textContent='▲ ▲ ▲';$('lives').setAttribute('aria-label','잔여 기체 3대');$('bombs').textContent='B × 02';$('weapon').textContent='VULCAN / LV. 01';$('progress').style.width='0%';$('announcer').textContent='';
   (matchMedia('(max-width:700px)').matches?$('mobile-launch'):$('launch')).focus({preventScroll:true});
 }
 
