@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111713">
+  <meta name="description" content="RAIJIN — 손끝으로 돌파하는 아케이드 슈팅. 자동 연사, 한 개의 스테이지, 마지막 보스. 지금 출격하세요.">
+  <meta property="og:title" content="RAIJIN · 작전명, 뇌신">
+  <meta property="og:description" content="One coast. One mission. 터치로 즐기는 세로 스크롤 아케이드 슈팅.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://rockyhong-a11y.github.io/raijin-strike/assets/cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>RAIJIN — 작전명, 뇌신</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="./" aria-label="RAIJIN 홈"><span class="bolt" aria-hidden="true"></span>RAIJIN<span class="edition">ARCADE / 01</span></a>
+    <div class="header-end"><span class="live-label"><i></i> SINGLE STAGE. FULL THROTTLE.</span><button class="sound-control" id="sound" aria-label="사운드 끄기" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4m12-1c2 2 2 6 0 8m3-11c4 4 4 10 0 14"/></svg><span id="sound-label">SOUND ON</span></button></div>
+  </header>
+
+  <main class="main-layout">
+    <section class="briefing" aria-labelledby="title">
+      <div class="mission-tag"><span>001</span> THE COASTAL ASSAULT</div>
+      <div class="title-lockup"><p class="japanese" aria-hidden="true">雷 神</p><h1 id="title">RAIJIN<span>작전명, 뇌신.</span></h1></div>
+      <p class="intro">하나의 기체. 마지막 방어선.<br>손끝으로 전장을 돌파하라.</p>
+      <button class="launch-button" id="launch"><span>출격하기</span><span class="button-arrow" aria-hidden="true">↗</span></button>
+      <p class="launch-caption">NO DOWNLOAD. JUST PLAY.</p>
+      <div class="mission-details"><div><span class="detail-label">MISSION</span><p>해안 기지 돌파<span>COAST → AIRBASE → IRON WING</span></p></div><div><span class="detail-label">CONTROL</span><p>드래그 이동 · 자동 연사<span>두 손가락 터치로 폭탄 사용</span></p></div></div>
+      <div class="desktop-hint"><span class="key">W A S D</span><span>이동</span><span class="key">SPACE</span><span>폭탄</span></div>
+    </section>
+
+    <section class="arcade" id="arcade" aria-label="RAIJIN 게임">
+      <div class="frame-top"><span><i></i> LIVE FLIGHT FEED</span><span>35° 42′ N · 139° 46′ E</span></div>
+      <div class="game-wrap" id="game-wrap">
+        <canvas id="game" width="480" height="800" tabindex="0" aria-label="게임 화면. 드래그 또는 방향키로 이동, 스페이스 또는 두 손가락 터치로 폭탄을 사용합니다.">이 게임은 Canvas를 지원하는 브라우저에서 플레이할 수 있습니다.</canvas>
+        <div class="game-vignette" aria-hidden="true"></div>
+        <div class="hud" id="hud"><div class="score"><span>1P SCORE</span><strong id="score">0000000</strong></div><div class="hud-right"><span>HI SCORE</span><strong id="best">0000000</strong><button id="pause" aria-label="일시 정지" hidden><span aria-hidden="true">Ⅱ</span></button></div></div>
+        <div class="stage-chip" id="stage-chip"><span class="stage-num">01</span><div><span>COASTAL ASSAULT</span><i><b id="progress"></b></i></div></div>
+        <div class="boss-hud" id="boss-hud" hidden><span>IRON WING<span id="boss-phase">PHASE 01</span></span><i><b id="boss-hp"></b></i></div>
+        <div class="game-bottom" id="game-bottom"><div class="resources"><span id="lives" aria-label="잔여 기체 3대">▲ ▲ ▲</span><span class="resource-divider"></span><span id="bombs">B × 02</span></div><span id="weapon">VULCAN / LV. 01</span></div>
+        <div class="attract-title" id="attract-title"><span class="ready-line">INTERCEPTOR R-01 · SYSTEM READY</span><strong>THE SKY<br>IS YOURS.</strong><p>드래그 이동 · 자동 연사 · 두 손가락 폭탄</p><button id="mobile-launch">출격하기 <span aria-hidden="true">↗</span></button></div>
+        <div class="touch-hint" id="touch-hint" aria-hidden="true"><span class="touch-orbit"></span><span>DRAG TO MOVE</span></div>
+        <div class="overlay" id="overlay" hidden><div><span class="overlay-kicker" id="overlay-kicker">FLIGHT INTERRUPTED</span><h2 id="overlay-title">PAUSED</h2><p id="overlay-copy">잠시 숨을 고르세요.</p><div class="result-stats" id="result-stats" hidden></div><button class="launch-button" id="resume"><span>계속하기</span><span aria-hidden="true">↗</span></button><button class="secondary-button" id="quit">브리핑으로 돌아가기</button></div></div>
+        <div class="loading" id="loading"><span>PREPARING FLIGHT</span><i><b id="loading-bar"></b></i></div>
+      </div>
+      <div class="frame-bottom"><span>R-01 / CRIMSON INTERCEPTOR</span><span>TOUCH. MOVE. SURVIVE.</span></div>
+    </section>
+
+    <aside class="flight-rail" aria-hidden="true"><span>OPERATION RAIJIN</span><div><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>ONE COAST. ONE MISSION.</span></aside>
+  </main>
+
+  <footer class="site-footer"><span>INSPIRED BY THE GOLDEN AGE OF ARCADE.</span><span>BUILT FOR YOUR THUMBS <span aria-hidden="true">↗</span></span><a href="https://github.com/rockyhong-a11y/raijin-strike" target="_blank" rel="noopener noreferrer">SOURCE CODE ↗</a></footer>
+  <div class="announcer" id="announcer" role="status" aria-live="polite"></div>
+  <script type="module" src="./game.js"></script>
+</body>
+</html>

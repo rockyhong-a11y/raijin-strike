@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.vercel/
+artifacts/
+*.blend1
+.DS_Store

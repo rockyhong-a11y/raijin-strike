@@ -1,0 +1,12 @@
+{
+  "name": "raijin-strike",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A touch-first vertical arcade shooter. One coast. One mission.",
+  "scripts": {
+    "dev": "node server.mjs",
+    "test": "node test.mjs",
+    "build": "node build.mjs"
+  }
+}

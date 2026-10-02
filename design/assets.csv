@@ -1,0 +1,9 @@
+id,role,type,description,size/ratio,style line ref,source
+coast,Scrolling stage terrain,background,Coastal military airfield,9:16,STYLE,generate
+cover,Launch and social artwork,background,Crimson interceptor above coast,16:9,STYLE,generate
+player,Player aircraft,Blender render,Crimson twin engine interceptor,512x512,STYLE,generate
+fighter,Fast enemy aircraft,Blender render,Olive swept wing fighter,384x384,STYLE,generate
+heavy,Armored enemy aircraft,Blender render,Graphite twin engine gunship,512x512,STYLE,generate
+tank,Ground enemy,Blender render,Olive tracked gun turret,384x384,STYLE,generate
+boss,Final encounter,Blender render,Iron wing fortress,768x768,STYLE,generate
+sound,Adaptive music and effects,Web Audio,Arcade electronic score and explosions,n/a,STYLE,generate
